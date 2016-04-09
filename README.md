@@ -1,5 +1,14 @@
 # My Projects Exhibition
 
+###展示已有作品
+
+- ![INDEX](http://img.coloranges.com/1604/3253030984498.png)
+
+- ![MOBILE INDEX](http://img.coloranges.com/1604/5463030984498.jpg)
+
+- ![OTHER](http://img.coloranges.com/1604/5803030984498.jpg)
+
+
 #### 2016.4.9
 * 对项目所用CSS和JS代码进行编译并压缩处理
 * 添加链接到相关作品的链接
