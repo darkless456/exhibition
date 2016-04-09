@@ -1,0 +1,50 @@
+/* 
+* @Author: darkless
+* @Date:   2015-12-29 16:26:10
+* @Last Modified by:   darkless
+* @Last Modified time: 2016-01-08 14:56:54
+*/
+
+.msg {
+    box-sizing: border-box;
+    padding: 60px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 0 15px #000;
+}
+
+fieldset {
+    /*margin: 30px;*/
+    padding: 15px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+input.input {
+    width: 552px;
+}
+
+label {
+    float: left;
+    width: 100px;
+}
+
+textarea {
+    width: 550px;
+    resize: none;
+}
+
+#nickname2,
+#email2,
+#discuession2 {
+    padding: 5px;
+    resize: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn {
+    margin-left: 70%;
+}

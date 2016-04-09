@@ -1,0 +1,93 @@
+/* 
+* @Author: darkless
+* @Date:   2015-07-21 17:33:08
+* @Last Modified by:   darkless
+* @Last Modified time: 2016-01-15 10:22:54
+*/
+
+h3 {
+    text-transform: capitalize;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    /*overflow: hidden;
+    */
+}
+
+.dis_btn {
+    display: block;
+    margin: 0 auto;
+}
+
+.box_border {
+    box-sizing: border-box;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #000;
+}
+
+#content {
+    width: 100%;
+    margin: 15px 0;
+    padding: 1px 120px;
+    padding-bottom: 120px;
+    background-color: #fff;
+}
+
+.content_sec {
+    margin-top: 120px;
+}
+
+
+.display_none {
+    display: none;
+}
+
+#content h2 {
+    margin: 30px 0;
+}
+
+.content_txt {
+    text-align: left;
+}
+
+.content_arti {
+    text-align: center;
+}
+
+.img_scroll_ol {
+    position: absolute;
+    z-index: 999;
+}
+
+.img_scroll_ul {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    height: 320px;
+    background-color: pink;
+}
+
+.img_scroll_ul li {
+    float: left;
+}
+
+.img_scroll_ul li img {
+    width: 569px;
+    height: 320px;
+}
+
+.img_scroll_div {
+    position: relative;
+    overflow: hidden;
+    box-sizing: border-box;
+    width: 100%;
+    height: 320px;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #000;
+}

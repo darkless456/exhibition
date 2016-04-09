@@ -11,10 +11,10 @@
 
 @font-face{
     font-family: 'raphaelicons';
-    src: url('./fonts/raphaelicons-webfont.ttf') format('truetype'),
-         url('./fonts/raphaelicons-webfont.eot') format('eot'),
-         url('./fonts/raphaelicons-webfont.woff') format('woff'),
-         url('./fonts/raphaelicons-webfont.svg') format('svg');
+    src: url('../fonts/raphaelicons-webfont.ttf') format('truetype'),
+         url('../fonts/raphaelicons-webfont.eot') format('eot'),
+         url('../fonts/raphaelicons-webfont.woff') format('woff'),
+         url('../fonts/raphaelicons-webfont.svg') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -29,7 +29,8 @@ body{
 
 /*基本配色*/
 
-@color_main: #E23A6E;
+/* @color_main: #E23A6E; */
+@color_main: darken(@color_green, 10%);
 @color_blue: #337ab7;
 @color_green: #5cb85c;
 @color_yellow: #f0ad4e;
@@ -229,6 +230,7 @@ body{
     font-size: 3em;
     font-weight: 900;
     line-height: 1;
+    white-space: nowrap;
     position: absolute;
     top: 50%;
     left: 10%;
@@ -305,6 +307,45 @@ body{
     margin-top: -10px;
     text-align: center;
     font-size: 1.14em;
+
+    &>span,
+    &>button{
+        display: block;
+    }
+
+    &>button{
+        border: 1px solid @color_main;
+        border-radius: 4px;
+        padding: 6px 12px;
+        background-color: @color_main;
+        box-shadow: 0 1px 2px fadeout(#000, 80%);
+        color: #fff;
+
+        white-space: nowrap;
+        position: relative;
+        left: 50%;
+        -webkit-transform:  translate(-50%, 100%);
+        -ms-transform:  translate(-50%, 100%);
+        -o-transform:   translate(-50%, 100%);
+        transform:  translate(-50%, 100%);
+
+        &>a{
+            text-decoration: none;
+            color: inherit;
+
+            z-index: 99;
+        }
+
+        &:hover{
+            background-color: darken(@color_main, 3%);
+            color: darken(#fff, 3%);
+        }
+
+        &:active{
+            background-color: darken(@color_main, 10%);
+        }
+    }
+
 }
 
 #control-1:checked ~ .scroll #panel-1>p,
@@ -381,6 +422,13 @@ body{
         }
         &>p{
             color: fadeout(#000,20%);
+            &>button{
+                @color_main_light: lighten(@color_main, 10%);
+                background-color: @color_main_light;
+                &:hover{
+                    background-color: darken(@color_main_light, 5%);
+                }
+            }
         }
     }
 }
