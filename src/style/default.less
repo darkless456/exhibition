@@ -112,7 +112,7 @@ body{
     content: '';
     width: 0;
     height: 0;
-    border: 20px solid transparent;
+    border: 21px solid transparent; /*+1px解决ff下锯齿问题*/
     border-bottom-color: darken(@color_main, 30%);
     position: absolute;
     bottom: 100%;
@@ -308,44 +308,28 @@ body{
     text-align: center;
     font-size: 1.14em;
 
-    &>span,
-    &>button{
+    &>span{
         display: block;
+        margin-bottom: 20px;
     }
 
-    &>button{
-        border: 1px solid @color_main;
-        border-radius: 4px;
-        padding: 6px 12px;
+    &>a{
+        border: 1px solid transparent;
+        border-radius: 5px;
+        box-shadow: 0px 0px 15px fadeout(#000, 80%);
+        text-decoration: none;
+        padding: 10px 16px;
         background-color: @color_main;
-        box-shadow: 0 1px 2px fadeout(#000, 80%);
         color: #fff;
 
-        white-space: nowrap;
-        position: relative;
-        left: 50%;
-        -webkit-transform:  translate(-50%, 100%);
-        -ms-transform:  translate(-50%, 100%);
-        -o-transform:   translate(-50%, 100%);
-        transform:  translate(-50%, 100%);
-
-        &>a{
-            text-decoration: none;
-            color: inherit;
-
-            z-index: 99;
-        }
-
         &:hover{
-            background-color: darken(@color_main, 3%);
-            color: darken(#fff, 3%);
+            background-color: darken(@color_main,5%);
         }
 
         &:active{
-            background-color: darken(@color_main, 10%);
+            box-shadow: 0 0 8px fadeout(#000, 80%);
         }
     }
-
 }
 
 #control-1:checked ~ .scroll #panel-1>p,
@@ -378,10 +362,12 @@ body{
 }
 @-moz-keyframes slideUp{
     0%{
+        -moz-transform: translateX(0);
         -moz-transform: translateY(60px);
         opacity: 0;
     }
     100%{
+        -moz-transform: translateX(0);
         -moz-transform: translateY(0);
         opacity: 1;
     }
@@ -422,13 +408,6 @@ body{
         }
         &>p{
             color: fadeout(#000,20%);
-            &>button{
-                @color_main_light: lighten(@color_main, 10%);
-                background-color: @color_main_light;
-                &:hover{
-                    background-color: darken(@color_main_light, 5%);
-                }
-            }
         }
     }
 }
